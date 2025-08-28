@@ -1,10 +1,12 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # מאפשר גישה מבחוץ (GitHub Pages, דפדפנים אחרים וכו')
 
 @app.route("/check", methods=["POST"])
 def check_password():
-    data = request.json   # נקבל JSON מהלקוח
+    data = request.json
     codenter = data.get("password")
     passa = "nisan1"
 
