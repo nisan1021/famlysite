@@ -4,16 +4,18 @@
 <meta charset="UTF-8">
 <title>אתר חדשות פשוט</title>
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
 
 <header>האתר של משפחת חן</header>
 
 <nav>
-    <a href="#">ראשי</a>
-    <a href="#">אודות</a>
-    <a href="#">פורום</a>
-    <a href="#">השכלה</a>
+    <a href="index.html">ראשי</a>
+    <a href="about.html">אודות</a>
+    <a href="forum.html">פורום</a>
+    <a href="school.html">השכלה</a>
+    <a href="password.html">בדיקת סיסמה</a>
 </nav>
 
 <main id="newsContainer">
@@ -27,22 +29,8 @@
     <button onclick="addNews()">הוסף כתבה חדשה</button>
 </div>
 
-<script src="script.js"></script>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="he">
-<head>
-  <meta charset="UTF-8">
-  <title>בדיקת סיסמה</title>
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <h1>בדיקת סיסמה</h1>
-  <input type="password" id="password" placeholder="הכנס סיסמה">
-  <button onclick="checkPassword()">בדוק</button>
-  <p id="result"></p>
-</body>
-</html>
+
 
 
