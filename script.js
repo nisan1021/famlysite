@@ -13,6 +13,7 @@ function addNews() {
     article.appendChild(text);
     newsContainer.appendChild(article);
 }
+
 async function checkPassword() {
   const password = document.getElementById("password").value;
 
@@ -26,9 +27,18 @@ async function checkPassword() {
     });
 
     const result = await response.json();
-    document.getElementById("result").innerText = result.message;
+
+    if (result.message === "ok you in") {
+      // מעבר לדף הנחיתה
+      window.location.href = "index.html";
+    } else {
+      document.getElementById("result").innerText = result.message;
+    }
+
   } catch (error) {
     document.getElementById("result").innerText = "שגיאה בחיבור לשרת";
+    console.error(error);
   }
 }
+
 
