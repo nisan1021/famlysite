@@ -13,3 +13,22 @@ function addNews() {
     article.appendChild(text);
     newsContainer.appendChild(article);
 }
+async function checkPassword() {
+  const password = document.getElementById("password").value;
+
+  try {
+    const response = await fetch("https://famlysite-2.onrender.com/check", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ password: password })
+    });
+
+    const result = await response.json();
+    document.getElementById("result").innerText = result.message;
+  } catch (error) {
+    document.getElementById("result").innerText = "שגיאה בחיבור לשרת";
+  }
+}
+
