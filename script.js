@@ -1,3 +1,4 @@
+// פונקציה להוספת כתבה חדשה
 function addNews() {
     const newsContainer = document.getElementById("newsContainer");
 
@@ -14,6 +15,7 @@ function addNews() {
     newsContainer.appendChild(article);
 }
 
+// פונקציה לבדוק סיסמה מול Flask ב-Render
 async function checkPassword() {
   const password = document.getElementById("password").value;
 
@@ -27,11 +29,13 @@ async function checkPassword() {
     });
 
     const result = await response.json();
+    console.log("Server response:", result); // מציג את התשובה מהשרת ב-Console
 
-    if (result.message === "ok you in") {
-      // מעבר לדף הנחיתה
+    if (result.message && result.message.toLowerCase().includes("ok you in")) {
+      // אם הסיסמה נכונה -> מעבר לדף הנחיתה
       window.location.href = "index.html";
     } else {
+      // אם הסיסמה שגויה -> מציג הודעה למשתמש
       document.getElementById("result").innerText = result.message;
     }
 
@@ -40,5 +44,6 @@ async function checkPassword() {
     console.error(error);
   }
 }
+
 
 
