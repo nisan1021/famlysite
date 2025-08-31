@@ -8,7 +8,7 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 def check_password():
     data = request.json
     codenter = data.get("password")
-    passa = "nisan1"
+    passa = "HEN1"
 
     if codenter == passa:
         return jsonify({"message": "ok you in"})
