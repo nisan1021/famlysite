@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>כלים מגניבים</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="tools">
+  <header class="site-header">
+    <h1>כלים מגניבים</h1>
+    <p class="subline">דברים שימושיים שאפשר לעשות מהר</p>
+  </header>
+
+  <nav class="site-nav">
+    <a href="index.html">ראשי</a>
+    <a href="about.html">אודות</a>
+    <a href="forum.html">פורום</a>
+    <a href="school.html">השכלה</a>
+    <a href="tools.html" class="active">כלים מגניבים</a>
+    <a href="password.html">בדיקת סיסמה</a>
+  </nav>
+
+  <main class="layout two-cols">
+    <section class="card">
+      <h2>מחולל שם למשימה משפחתית</h2>
+      <button onclick="generateChallenge()">צור משימה 🎯</button>
+      <p id="challengeBox" class="tip-box"></p>
+    </section>
+
+    <section class="card">
+      <h2>מחשבון גיל מהיר</h2>
+      <form id="ageForm" class="inline-form">
+        <input id="birthYear" type="number" min="1900" max="2100" placeholder="שנת לידה" required>
+        <button type="submit">חשב גיל</button>
+      </form>
+      <p id="ageResult"></p>
+    </section>
+  </main>
+</body>
+</html>
