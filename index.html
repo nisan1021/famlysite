@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>אתר של משפתחת חן</title>
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>האתר של משפחת חן</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
+<body data-page="home">
+  <header class="site-header">
+    <h1>האתר של משפחת חן</h1>
+    <p id="liveClock" class="subline"></p>
+  </header>
 
-<header>האתר של משפחת חן</header>
-
-<nav>
-    <a href="index.html">ראשי</a>
+  <nav class="site-nav">
+    <a href="index.html" class="active">ראשי</a>
     <a href="about.html">אודות</a>
     <a href="forum.html">פורום</a>
     <a href="school.html">השכלה</a>
+    <a href="tools.html">כלים מגניבים</a>
     <a href="password.html">בדיקת סיסמה</a>
-</nav>
+  </nav>
 
-<main id="newsContainer">
-    <article>
-        <h2>מאמר ראשון</h2>
-        <p>זהו טקסט הדגמה למאמר חדש באתר.</p>
-    </article>
-</main>
+  <main class="layout">
+    <section class="card hero">
+      <h2>ברוכים הבאים 👋</h2>
+      <p>שדרגנו את האתר עם יותר דפים, יכולות חדשות, מצב לילה, פורום משפחתי, מחשבונים וכלים ללימודים.</p>
+      <div class="hero-actions">
+        <button onclick="toggleTheme()">🌓 החלפת מצב צבע</button>
+        <button onclick="showRandomTip()">💡 טיפ יומי</button>
+      </div>
+      <p id="tipBox" class="tip-box"></p>
+    </section>
 
-<div style="text-align:center; margin-bottom:20px;">
-    <button onclick="addNews()">דהוסף ידיעה חדשה</button>
-</div>
-
+    <section class="card">
+      <h2>חדשות משפחתיות</h2>
+      <form id="newsForm" class="inline-form">
+        <input id="newsTitle" type="text" placeholder="כותרת ידיעה" required>
+        <input id="newsText" type="text" placeholder="תוכן קצר" required>
+        <button type="submit">הוסף ידיעה</button>
+      </form>
+      <div id="newsContainer"></div>
+    </section>
+  </main>
 </body>
 </html>
-
-
-
-

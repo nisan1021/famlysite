@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פורום משפחתי</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="forum">
+  <header class="site-header">
+    <h1>פורום משפחתי</h1>
+    <p class="subline">כותבים, משתפים, ומגיבים ביחד</p>
+  </header>
+
+  <nav class="site-nav">
+    <a href="index.html">ראשי</a>
+    <a href="about.html">אודות</a>
+    <a href="forum.html" class="active">פורום</a>
+    <a href="school.html">השכלה</a>
+    <a href="tools.html">כלים מגניבים</a>
+    <a href="password.html">בדיקת סיסמה</a>
+  </nav>
+
+  <main class="layout">
+    <section class="card">
+      <h2>פרסום הודעה חדשה</h2>
+      <form id="forumForm" class="inline-form">
+        <input id="forumName" type="text" placeholder="שם" required>
+        <input id="forumMessage" type="text" placeholder="מה רצית לשתף?" required>
+        <button type="submit">פרסום</button>
+      </form>
+      <div id="forumPosts"></div>
+    </section>
+  </main>
+</body>
+</html>
